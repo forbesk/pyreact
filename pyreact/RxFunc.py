@@ -1,5 +1,5 @@
 class RxFunc:
-    def __init__(self, func, sink=None, sources=None):
+    def __init__(self, func=None, sink=None, sources=None):
         self.func = func
         self.sink = sink
         self.sources = sources
@@ -8,4 +8,5 @@ class RxFunc:
         for source in self.sources:
             if source.supplier != None:
                 source.supplier.update()
+
         self.sink.value = self.func()

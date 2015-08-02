@@ -13,4 +13,4 @@ class Reactive:
             source.add_consumer(rxfunc)
             source.invalidate()
         
-        rxfunc.update()
+#        rxfunc.update()
